@@ -8,7 +8,7 @@ let books = [
     { id: 1, title: "Node.js Essentials", author: "John Doe", year: 2021 }
 ];
 
-// Middleware to validate book data
+
 function validateBook(req, res, next) {
     const { id, title, author, year } = req.body;
     if (!id || !title || !author || !year) {
@@ -17,7 +17,7 @@ function validateBook(req, res, next) {
     next();
 }
 
-// Routes
+
 app.get('/books', (req, res) => {
     res.json(books);
 });
